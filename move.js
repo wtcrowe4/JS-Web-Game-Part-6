@@ -4,6 +4,7 @@ function move(element) {
     function moveToCoordinates(left, bottom) {
         element.style.left = left + 'px'
         element.style.bottom = bottom + 'px'
+        element.style.zIndex = 1000 - bottom
     }
 
     function moveWithArrowKeys(left, bottom, callback){
@@ -29,6 +30,7 @@ function move(element) {
             }
             element.style.left = x + 'px'
             element.style.bottom = y + 'px'
+            element.style.zIndex = 1000 - y
         }
         
         setInterval(moveCharacter, 1)
